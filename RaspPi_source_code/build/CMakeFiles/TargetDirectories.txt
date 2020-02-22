@@ -1,0 +1,3 @@
+/home/ubuntu/myThesis/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/myThesis/build/CMakeFiles/Comp_Vision.dir
+/home/ubuntu/myThesis/build/CMakeFiles/edit_cache.dir
