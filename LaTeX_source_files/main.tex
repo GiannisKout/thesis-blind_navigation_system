@@ -1,0 +1,154 @@
+\documentclass[a4paper,12pt,twoside]{book}
+\usepackage{upatras-thesis}
+
+
+% PDF settings
+%
+% \hypersetup
+% {
+%     pdfauthor={\me},
+%     pdftitle={\shortdoctitle},
+%     pdfsubject={\doctitle},
+%     pdfkeywords={\keywords},
+%     pdfproducer={pdfLaTeX},
+%     pdfcreator={\creator}
+% }
+
+%
+% These commands need to be defined in order to produce a correct and personalized document
+%
+\newcommand{\shortdoctitle}{Διπλωματική Εργασία}
+\newcommand{\doctitle}{Σύστημα Υποβοήθησης Πλοήγησης για Άτομα με Προβλήματα Όρασης}
+% \newcommand{\docsubtitle}{Υπότιτλος εγγράφου}
+\newcommand{\division}{Τηλεπικοινωνιών και Τεχνολογίας Πληροφορίας (Τ.\&Τ.Π.)}
+\newcommand{\lab}{Ομάδα Απεικόνισης Πληροφορίας \& Εικονικής Πραγματικότητας}
+
+\newcommand{\me}{Ιωάννη Κουτουλογένη του Ανδρέα} %(σε γενική πτώση) ΠΡΟΣΟΧΗ: στοιχεία σε γενική πτώση. Παράδειγμα: Άγγελου Σικελιανού του Ιωάννη
+%
+\newcommand{\nomme}{Ιωάννης Κουτουλογένης του Ανδρέα} %(σε ονομαστική πτώση) ΠΡΟΣΟΧΗ: στοιχεία σε ονομαστική πτώση. Παράδειγμα: Άγγελος Σικελιανός του Ιωάννη
+%
+\newcommand{\studnum}{1019659}
+\newcommand{\keywords}{}
+\newcommand{\monthyear}{Φεβρουάριος 2020}
+
+\newcommand{\supname}{Κωνσταντίνος Μουστάκας}
+\newcommand{\suptitle}{Αναπληρωτής Καθηγητής}
+\newcommand{\supuni}{Πανεπιστήμιο Πατρών}
+
+\newcommand{\cosupname}{Κυριάκος Σγάρμπας}
+\newcommand{\cosuptitle}{Αναπληρωτής Καθηγητής}
+\newcommand{\cosupuni}{Πανεπιστήμιο Πατρών}
+
+\newcommand{\headofdivision}{Ιωάννης Μουρτζόπουλος}
+\newcommand{\headofdivisiontitle}{Καθηγητής}
+
+\author{\me}
+
+% GLOSSARY
+
+\makeglossaries
+\setlength{\glsdescwidth}{0.7\hsize}
+\setlength{\headheight}{15pt}
+\input{library/glossary}
+% BEGIN DOCUMENT
+\begin{document}
+
+% SET PAGE NUMBERING TO ROMAN
+\pagenumbering{roman}
+\setcounter{page}{3}
+
+%*************************%
+%         TITLES          %
+%*************************%
+
+\include{intro/titlepage}
+\clearemptydoublepage
+
+\include{intro/certification-gr}
+\clearemptydoublepage
+
+% \include{intro/certification-en}
+% \clearemptydoublepage
+
+% \include{intro/about}
+% \clearemptydoublepage
+
+\include{intro/abstract-gr}
+\include{intro/abstract-en}
+\clearemptydoublepage
+
+\include{intro/acknowledgements}
+\clearemptydoublepage
+
+\pagestyle{empty}
+
+{\hypersetup{linkcolor=black}
+\renewcommand*\contentsname{Περιεχόμενα}
+\tableofcontents
+}
+\clearemptydoublepage
+
+%*************************%
+%    1. Lists of figures  %
+%    2. List of Tables    %
+%    3. Glossary          %
+%*************************%
+% \listoffigures
+% \listoftables
+% \printglossaries
+% \clearemptydoublepage
+
+{\hypersetup{linkcolor=black}
+\listoffigures
+\listoftables
+\glsaddall
+%\printglossary[title=Ακρωνύμια, toctitle=Ακρωνύμια,type=\acronymtype] % prints just the list of acronyms
+\clearemptydoublepage
+%\printglossary[style = mylong]
+}
+
+%\printglossary
+% \clearemptydoublepage
+
+% easter_egg
+
+\mainmatter % book mode only
+\clearemptydoublepage
+
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%*************************%
+%       Main Chapters     %
+%*************************%
+
+% Introduction
+\input{chapters/introduction}
+\clearemptydoublepage
+% % Chapters
+\input{chapters/chapter1_state_of_the_art.tex}
+\clearemptydoublepage
+\input{chapters/chapter2_architecture.tex}
+\clearemptydoublepage
+\input{chapters/chapter3_demo.tex}
+\clearemptydoublepage
+\input{chapters/chapter4_conclusion.tex}
+\clearemptydoublepage
+\input{chapters/chapter5_appendix.tex}
+\clearemptydoublepage
+% Next Chapters
+% .............
+% .............
+
+%**************************%
+%    END OF MAIN THESIS    %
+%**************************%
+% bibliography
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv, library/bibliography.bib}
+\clearemptydoublepage
+% Last Page
+\input{intro/lastpage}
+\end{document}
