@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Blind Assistant</string>
+    <string name="click_me">Click me</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
